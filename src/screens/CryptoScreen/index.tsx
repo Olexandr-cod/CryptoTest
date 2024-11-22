@@ -104,7 +104,7 @@ const CryptoScreen = () => {
                     <FlatList
                         data={cryptoData.filter((crypto) => selectedCryptos.includes(crypto.symbol))}
                         contentContainerStyle={cs.mh16}
-                        keyExtractor={(key) => key?.change}
+                        keyExtractor={(key) => key?.symbol}
                         renderItem={(item) => <RenderCtyptoItem item={item?.item} />}
                     />
                 ) : (
